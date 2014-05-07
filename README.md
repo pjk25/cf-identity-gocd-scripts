@@ -1,2 +1,2 @@
-cf_identity_gocd_scripts
+cf-identity-gocd-scripts
 ========================
