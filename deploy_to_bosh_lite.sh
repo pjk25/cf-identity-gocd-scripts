@@ -3,7 +3,7 @@
 set -ex
 
 ./update
-cp /var/vcap/packages/scripts/cf-stub.yml
+cp /var/vcap/packages/scripts/cf-stub.yml .
 rm -f ~/.bosh_config
 bosh -u admin -p admin target $BOSH_LITE_TARGET
 ../gocd_scripts/replace_director_uuid.sh
