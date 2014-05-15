@@ -8,6 +8,7 @@ rm -f ~/.bosh_config
 bosh -u admin -p admin target $BOSH_LITE_TARGET
 ../gocd_scripts/replace_director_uuid.sh
 ../gocd_scripts/generate_warden_manifest.sh
+bosh -n delete release cf
 bosh -n create release cf --force
 bosh login admin admin
 bosh -n upload release --skip-if-exists
