@@ -1,4 +1,5 @@
 #!/bin/bash -ex
 
-CONFIG=`dirname "$0"`/integration_config.json
-./bin/test -v
+bosh login admin admin
+bosh deployment the_manifest.yml
+bosh run errand cf_acceptance_tests_errand
