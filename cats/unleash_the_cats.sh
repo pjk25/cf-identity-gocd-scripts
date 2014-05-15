@@ -1,4 +1,4 @@
 #!/usr/bin/bash -ex
 
-CONFIG=`pwd`/integration_config.json
-../../cf-acceptance-tests/bin/test -v
+CONFIG=`dirname "$0"`/integration_config.json
+./bin/test -v
