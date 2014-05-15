@@ -2,4 +2,4 @@
 
 bosh login admin admin
 bosh deployment the_manifest.yml
-bosh run errand cf_acceptance_tests_errand
+bosh run errand smoke_tests

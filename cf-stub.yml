@@ -3,23 +3,3 @@ director_uuid: ${director_uuid}
 releases:
   - name: cf
     version: latest
-  - name: runtime-verification-errands
-    version: latest
-jobs:
-  - name: cf_smoke_tests_errand # Choose your own name
-    release: runtime-verification-errands
-    template: cf-smoke-tests
-    instances: 1
-    resource_pool: small_z1
-    lifecycle: errand
-    networks:
-      - name: cf1
-    properties:
-      cf_smoke_tests:
-        api: api.10.244.0.34.xip.io
-        apps_domain: 10.244.0.34.xip.io
-        user: admin
-        password: admin
-        org: TEST_ORG
-        space: TEST_SPACE
-        skip_ssl_validation: true
